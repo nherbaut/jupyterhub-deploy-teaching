@@ -1,0 +1,5 @@
+---
+
+- name: install java jdk 9
+  apt: pkg=openjdk-9-jdk-headless
+

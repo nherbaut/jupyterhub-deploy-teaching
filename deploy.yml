@@ -44,3 +44,6 @@
     - role: start_jupyterhub
   environment:
       PATH: "/opt/conda/bin:{{ default_path.stdout }}"
+- hosts: jupyterhub_hosts
+  roles:
+     - java
