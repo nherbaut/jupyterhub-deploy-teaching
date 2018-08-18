@@ -3,7 +3,7 @@
 # This playbook installs common packages used on a UNIX/Linux system
 
 - name: update apt
-  apt: update_cache=yes cache_valid_time=3600
+  apt: update_cache=yes
   become: yes
 
 # required to upgrade apt

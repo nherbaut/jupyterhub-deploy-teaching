@@ -38,6 +38,12 @@
     - saveusers
     - role: bash
       when: install_bash_kernel is defined and install_bash_kernel
+  environment:
+      PATH: "/opt/conda/bin:{{ default_path.stdout }}"
+
+- name: jupyhub_install
+  hosts: jupyterhub_hosts   
+  roles:  
     - jupyterhub
     - role: cull_idle
       when: use_cull_idle_servers is defined and use_cull_idle_servers

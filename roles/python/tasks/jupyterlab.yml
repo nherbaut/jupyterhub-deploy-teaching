@@ -2,7 +2,7 @@
 # Install JupyterLab and its extensions
 
 - name: conda install jupyterlab
-  conda: name=jupyterlab state=present
+  conda: name=jupyterlab version="0.33.12" state=present
   become: true
 
 - name: conda install npmjs for jupyterlab

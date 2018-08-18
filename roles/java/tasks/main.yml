@@ -1,5 +1,14 @@
 ---
 
-- name: install java jdk 9
-  apt: pkg=openjdk-9-jdk-headless
+- apt_repository:
+    repo: ppa:linuxuprising/java
 
+- name: accept oracle license 1
+  shell: echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
+
+- name: accept oracle license 2
+  shell: echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
+- name: Install oracle java 10
+  apt:
+    name: oracle-java10-installer
+    update_cache: yes
