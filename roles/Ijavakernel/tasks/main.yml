@@ -1,0 +1,23 @@
+---
+
+
+- name: install unzip
+  become_user: root
+  apt: pkg=unzip
+
+
+- name: unzip IjavaKernel
+  become_user: root
+  unarchive :
+    src: https://github.com/SpencerPark/IJava/releases/download/v1.1.1/ijava-1.1.1.zip
+    dest: /tmp/
+    remote_src: yes
+
+
+
+
+- name: installing ijava kernel
+  become: yes
+  args:
+    chdir: /tmp
+  shell: /opt/conda/bin/python3 ./install.py
