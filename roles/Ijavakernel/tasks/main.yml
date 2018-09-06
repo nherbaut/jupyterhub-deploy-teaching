@@ -9,7 +9,7 @@
 - name: unzip IjavaKernel
   become_user: root
   unarchive :
-    src: https://github.com/SpencerPark/IJava/releases/download/v1.1.1/ijava-1.1.1.zip
+    src: https://github.com/SpencerPark/IJava/releases/download/v1.1.2/ijava-1.1.2.zip
     dest: /tmp/
     remote_src: yes
 

@@ -18,6 +18,8 @@ jupyterhub_admin_users:
   - instructor1
   - instructor2
   - nherbaut
+  - spoonless
+  - SpencerPark
 
 # Whitelist of jupyterhub users.
 jupyterhub_users:
@@ -89,7 +91,7 @@ cran_packages: []
 # page, and the users' home directories will be automatically created.
 
 # Set to `true` to enable.
-use_oauth: false
+use_oauth: true
 
 # The OAuth callback URL.
 oauth_callback_url: https://teaching.nextnet.top/hub/oauth_callback
@@ -131,7 +133,7 @@ cull_timeout: 600
 # List of the GitHub usernames who will receive root access via ssh. Public
 # GitHub SSH keys will be installed to allow the user to ssh into the server as
 # root.
-github_usernames: ['nherbaut']
+github_usernames: ['nherbaut','SpencerPark','spoonless']
 
 # To mount local file systems populate this list. (Optional) This adds the
 # entries to /etc/fstab, creates the mount points, and mounts them. Note: Disks
@@ -148,7 +150,7 @@ local_mounts: []
 # letsencrypt to generate SSL key/cert, set `use_letsencrypt` to `true`
 # Otherwise if not using letsencrypt for SSL, you MUST put your key and cert
 # into the security directory as `security/ssl.crt` and `security/ssl.key`.
-use_letsencrypt: false
+use_letsencrypt: true
 letsencrypt_email: 'nico@nextnet.top'
 
 # Should users have `/public_html/username` directories. Set this to `true` to
